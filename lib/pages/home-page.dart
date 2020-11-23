@@ -17,16 +17,33 @@ class _HomePageState extends State<HomePage> {
           child: Padding(
             padding:
                 const EdgeInsets.symmetric(horizontal: 24.0, vertical: 32.0),
-            child: Column(
-              mainAxisAlignment: MainAxisAlignment.start,
-              crossAxisAlignment: CrossAxisAlignment.start,
-              children: [
-                Image(
-                  image: AssetImage("images/logo.png"),
+            child: Stack(children: [
+              Column(
+                mainAxisAlignment: MainAxisAlignment.start,
+                crossAxisAlignment: CrossAxisAlignment.start,
+                children: [
+                  Image(
+                    image: AssetImage("images/logo.png"),
+                  ),
+                  Task(
+                    title: "Get Started",
+                    description:
+                        "Hello user. Welcome to Todo App. This is a dummy text. You can edit it and write down by yourself.",
+                  ),
+                  Task(),
+                ],
+              ),
+              Positioned(
+                bottom: 0.0,
+                right: 0.0,
+                child: Container(
+                  decoration: BoxDecoration(color: Color(0xFF7349FE)),
+                  child: Image(
+                    image: AssetImage("images/add_icon.png"),
+                  ),
                 ),
-                Task(),
-              ],
-            ),
+              )
+            ]),
           ),
         ),
       ),

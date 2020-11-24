@@ -8,7 +8,7 @@ class Task extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Container(
-      margin: EdgeInsets.symmetric(vertical: 32.0),
+      margin: EdgeInsets.symmetric(vertical: 20.0),
       width: double.infinity,
       decoration: BoxDecoration(
           color: Colors.white, borderRadius: BorderRadius.circular(10)),
